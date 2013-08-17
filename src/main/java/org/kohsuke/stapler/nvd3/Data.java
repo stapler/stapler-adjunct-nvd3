@@ -32,12 +32,12 @@ public class Data<V extends Value> implements HttpResponse {
         with(data);
     }
 
-    public Data with(Series<V>... data) {
+    public Data<V> with(Series<V>... data) {
         this.data.addAll(Arrays.asList(data));
         return this;
     }
 
-    public Data with(Series<V> s) {
+    public Data<V> with(Series<V> s) {
         this.data.add(s);
         return this;
     }

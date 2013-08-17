@@ -29,17 +29,17 @@ public class Series<V extends Value> {
         this.key = key;
     }
     
-    public Series with(V... data) {
+    public Series<V> with(V... data) {
         this.values.addAll(Arrays.asList(data));
         return this;
     }
 
-    public Series color(String c) {
+    public Series<V> color(String c) {
         this.color = c;
         return this;
     }
 
-    public Series with(V s) {
+    public Series<V> with(V s) {
         this.values.add(s);
         return this;
     }

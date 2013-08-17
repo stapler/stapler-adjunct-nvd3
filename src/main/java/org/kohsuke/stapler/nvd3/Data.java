@@ -28,6 +28,9 @@ import java.util.List;
 public class Data<V extends Value> implements HttpResponse {
     public final List<Series<V>> data = new ArrayList<Series<V>>();
 
+    public Data() {
+    }
+
     public Data(Series<V>... data) {
         with(data);
     }

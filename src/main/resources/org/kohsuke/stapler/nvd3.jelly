@@ -1,0 +1,5 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler">
+  <st:adjunct includes="org.kohsuke.stapler.d3"/>
+  <link href="${it.packageUrl}/nv.d3.css" rel="stylesheet" type="text/css" />
+  <script src="${it.packageUrl}/nv.d3${it.manager.debug?'.min':''}.js" type="text/javascript" />
+</j:jelly>

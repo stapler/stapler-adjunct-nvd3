@@ -22,8 +22,8 @@ public class XYValue extends Value {
     @Override
     protected void writeTo(DataWriter w) throws IOException {
         w.startArray();
-        w.value(x.toString());
-        w.value(y.toString());
+        w.valuePrimitive(x);
+        w.valuePrimitive(y);
         w.endArray();
     }
 }

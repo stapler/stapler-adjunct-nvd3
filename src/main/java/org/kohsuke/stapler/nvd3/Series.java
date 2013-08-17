@@ -51,7 +51,7 @@ public class Series<V extends Value> {
 
         if (color!=null) {
             w.name("color");
-            w.value(color   );
+            w.value(color);
         }
 
         w.name("values");

@@ -19,7 +19,10 @@ public abstract class Value {
         if (value==null) {
             w.valueNull();
         } else {
-            w.value(value.toString());
+            if (value instanceof String)
+                w.value(value.toString());
+            else
+                w.valuePrimitive(value);
         }
     }
 }

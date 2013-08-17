@@ -23,6 +23,6 @@ public class Point extends Value {
         if (value==null)
             w.valueNull();
         else
-            w.value(value.toString());
+            w.valuePrimitive(value);
     }
 }

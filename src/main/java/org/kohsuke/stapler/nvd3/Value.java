@@ -13,4 +13,13 @@ import java.io.IOException;
  */
 public abstract class Value {
     protected abstract void writeTo(DataWriter w) throws IOException;
+
+    protected void value(DataWriter w, String name, Object value) throws IOException {
+        w.name(name);
+        if (value==null) {
+            w.valueNull();
+        } else {
+            w.value(value.toString());
+        }
+    }
 }

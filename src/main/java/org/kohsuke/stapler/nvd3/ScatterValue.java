@@ -23,18 +23,12 @@ public class ScatterValue extends XYValue {
     protected void writeTo(DataWriter w) throws IOException {
         w.startObject();
 
-        w.name("x");
-        w.value(x.toString());
-
-        w.name("y");
-        w.value(y.toString());
-
-        w.name("size");
-        w.value(size.toString());
+        value(w,"x",x);
+        value(w,"y",y);
+        value(w,"size",size);
 
         if (shape!=null) {
-            w.name("shape");
-            w.value(shape.toString());
+            value(w,"shape",shape);
         }
 
         w.endObject();

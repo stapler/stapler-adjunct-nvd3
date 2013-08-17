@@ -20,13 +20,8 @@ public class LabeledValue extends Point {
     @Override
     protected void writeTo(DataWriter w) throws IOException {
         w.startObject();
-
-        w.name("value");
-        w.value(value.toString());
-
-        w.name("label");
-        w.value(label);
-
+        value(w,"value",value);
+        value(w,"label",label);
         w.endObject();
     }
 }

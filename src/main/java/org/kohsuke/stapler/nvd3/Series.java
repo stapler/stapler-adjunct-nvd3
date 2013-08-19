@@ -5,7 +5,7 @@ import org.kohsuke.stapler.export.DataWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Collection;
 
 /**
  * A single sequence of data points.
@@ -23,7 +23,7 @@ public class Series<V extends Value> {
      */
     public String color;
 
-    public final List<V> values = new ArrayList<V>();
+    public Collection<V> values = new ArrayList<V>();
 
     public Series(String key) {
         this.key = key;
@@ -31,6 +31,11 @@ public class Series<V extends Value> {
     
     public Series<V> with(V... data) {
         this.values.addAll(Arrays.asList(data));
+        return this;
+    }
+
+    public Series<V> wrap(Collection<V> values) {
+        this.values = values;
         return this;
     }
 
